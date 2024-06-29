@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: lightyellow;">
+    <center><h1>Registration Form</h1>
+        <form method="post" action="{% url 'form' %}" style="margin: 50px;">
+            {% csrf_token %}
+            <label for="name" style="margin: 10px;">Name</label>
+            <input placeholder="Enter your full name" name="name" type="text" required style="width: 120px; height: 20px; margin-left: 2px; margin-right: 2px; font-size: small; border: solid black;"><br><br>
+            <label for="email" style="margin: 10px;">Email</label>
+            <input placeholder="Enter your email" name="email" type="email" required  style="width: 120px; height: 20px;  margin-left: 2px; margin-right: 2px; font-size: small; border: solid black;"><br><br>
+            <label for="contact" style="margin: 10px;">contact</label>
+            <input placeholder="Enter your contact num" name="contact" type="number" required  style="width: 120px; height: 20px;  margin-left: 2px; margin-right: 2px; font-size: small; border: solid black;"><br><br>
+            <label for="summit">submit your information!</label>
+           <input placeholder="submit" id="submit" type="submit" required style=" border-color: lightblue; font-size: x-small;"><br><br>
+           if you want to reset your information then click on
+           <input placeholder="reset" id="reset" type="Reset" style="border-color: lightblue; font-size: x-small;">
+        </form>
+    </center>    
+    
+</body>
+</html>
