@@ -8,5 +8,9 @@ def form(request):
     return render(request,'home.html')
 
 def register(request):
-    print(request.method)
-    print(request.POST)
+    print(request.method) #o/p--->'POST' at terminal
+    print(request.POST)  #o/p--->query set in key value pair
+    name=request.POST.get('name')
+    email=request.POST.get('email')
+    contact=request.POST.get('email')
+    print(name,email,contact)
